@@ -1,0 +1,88 @@
+CARA MEMASANG WEBSITE RUBI DI rubisikitsune.web.id
+===================================================
+Website ini statis (hanya HTML, gambar, dan font), jadi bisa dititipkan gratis
+di GitHub Pages. Kerjakan dari komputer, lebih mudah daripada dari HP.
+
+
+SEBELUM MULAI: CEK TAUTAN
+--------------------------
+Buka index.html dengan Notepad, lalu cari (Ctrl+F) tiga alamat ini:
+
+  https://www.youtube.com/@rubisikitsune
+      Pastikan handle YouTube Rubi memang @rubisikitsune.
+      Kalau berbeda, ganti semua (ada 3 tempat).
+
+  https://www.facebook.com/search/top?q=...
+      Ini sementara: membuka pencarian "Rubi si Kitsune" di Facebook.
+      Ganti dengan alamat halaman Facebook Rubi yang asli
+      (buka halamannya, ketuk Bagikan, lalu Salin tautan).
+
+  https://www.instagram.com/rubisikitsune/
+      Sudah sesuai nama pengguna Instagram Rubi.
+
+
+LANGKAH 1: UNGGAH KE GITHUB
+----------------------------
+1. Buka github.com, masuk atau buat akun.
+2. Klik tombol "+" di kanan atas, pilih "New repository".
+3. Repository name: rubi-web
+   Pilih "Public". Klik "Create repository".
+4. Di halaman repository yang kosong, klik "uploading an existing file".
+5. Buka folder rubi-web di komputer, pilih SEMUA isinya (index.html, CNAME,
+   favicon.png, robots.txt, sitemap.xml, folder img, folder font), lalu seret
+   ke halaman GitHub. Folder img dan font harus ikut terunggah.
+6. Klik "Commit changes".
+
+
+LANGKAH 2: NYALAKAN GITHUB PAGES
+---------------------------------
+1. Di repository rubi-web, buka "Settings", lalu "Pages" di menu kiri.
+2. Source: "Deploy from a branch". Branch: "main", folder: "/ (root)". Save.
+3. Di bagian "Custom domain", isi: rubisikitsune.web.id lalu Save.
+   (File CNAME di folder sudah berisi nama ini.)
+
+
+LANGKAH 3: ARAHKAN DOMAIN (DI DOMAINMURAH)
+-------------------------------------------
+Buka my.domainmurah.net, pilih domain rubisikitsune.web.id, tab "DNS".
+Nameserver biarkan tetap ns3/ns4.domainmurah.net.
+
+Tambahkan 4 record A untuk domain utama (Host/Nama: @):
+  A   @   185.199.108.153
+  A   @   185.199.109.153
+  A   @   185.199.110.153
+  A   @   185.199.111.153
+
+Tambahkan 1 record CNAME untuk www:
+  CNAME   www   NAMA-AKUN-GITHUB-MU.github.io
+
+(Ganti NAMA-AKUN-GITHUB-MU dengan nama akun GitHub-mu.)
+Kalau sudah ada record A atau CNAME lama untuk @ atau www, hapus dulu.
+
+
+LANGKAH 4: TUNGGU, LALU NYALAKAN HTTPS
+---------------------------------------
+1. Perubahan DNS bisa butuh beberapa menit sampai 24 jam.
+2. Kembali ke Settings > Pages di GitHub. Kalau sudah ada tulisan bahwa
+   DNS check berhasil, centang "Enforce HTTPS".
+3. Buka https://rubisikitsune.web.id di HP.
+
+
+MENAMBAH TIPS BARU NANTI
+-------------------------
+Kirim ke Claude: "Tambahkan tips video [judul] ke website Rubi", lalu unggah
+ulang index.html yang baru ke repository (Add file > Upload files, timpa
+yang lama, Commit changes). Situs akan berubah sendiri dalam 1-2 menit.
+
+
+ISI FOLDER
+-----------
+index.html       halaman utama
+CNAME            nama domain untuk GitHub Pages
+favicon.png      ikon tab browser
+robots.txt       izin untuk mesin pencari
+sitemap.xml      daftar halaman untuk Google
+img/             gambar Rubi, logo, gambar pratinjau saat link dibagikan
+font/            font Poppins (lisensi OFL, ada di font/OFL-1.1.txt)
+
+Rubi · dibuat oleh Andre

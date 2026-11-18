@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubi si Kitsune - Teman Belajar Teknologi & AI</title>
+<meta name="description" content="Tips 30 detik dari Rubi supaya kamu dan keluarga aman di dunia digital: modus penipuan, keamanan akun dan HP, dan cara pintar memakai AI.">
+<meta name="theme-color" content="#1c101a">
+<link rel="canonical" href="https://rubisikitsune.web.id/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Rubi si Kitsune - Teman Belajar Teknologi & AI">
+<meta property="og:description" content="Tips 30 detik supaya kamu dan keluarga aman di dunia digital.">
+<meta property="og:url" content="https://rubisikitsune.web.id/">
+<meta property="og:image" content="https://rubisikitsune.web.id/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Rubi si Kitsune", "url": "https://rubisikitsune.web.id/", "description": "Tips singkat keamanan digital dan AI dari Rubi, teman belajar teknologi.", "author": {"@type": "Person", "name": "Andre"}}</script>
+<style>
+@font-face { font-family: 'Poppins'; src: url('font/Poppins-Medium.ttf') format('truetype'); font-weight: 400 500; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('font/Poppins-Bold.ttf') format('truetype'); font-weight: 600 800; font-display: swap; }
+:root {
+  --bg: #1c101a; --bg2: #2a1824; --card: #34202e; --card2: #46283c; --line: #553248;
+  --cream: #faf4ea; --muted: #c8b4be; --orange: #f08c3c; --teal: #28beb4; --gold: #ffd65a; --red: #e65046;
+  --r: 22px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; color: var(--cream);
+  background: radial-gradient(1200px 700px at 70% -10%, #5a2e22 0%, transparent 60%), linear-gradient(180deg, var(--bg2), var(--bg) 60%);
+  background-color: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+img.px { image-rendering: pixelated; image-rendering: crisp-edges; }
+.wrap { width: min(1080px, 100% - 40px); margin: 0 auto; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--gold); color: #1c101a; padding: 8px 14px; border-radius: 10px; font-weight: 700; z-index: 20; }
+.skip:focus { left: 12px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+
+/* header */
+header.top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); background: rgba(28,16,26,.82); border-bottom: 1px solid rgba(255,255,255,.06); }
+.top .wrap { display: flex; align-items: center; gap: 12px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 18px; }
+.brand img { width: 38px; height: 38px; border-radius: 50%; }
+.brand small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); line-height: 1.1; }
+nav.links { margin-left: auto; display: flex; gap: 4px; }
+nav.links a { text-decoration: none; font-size: 14px; padding: 8px 12px; border-radius: 999px; color: var(--muted); }
+nav.links a:hover { color: var(--cream); background: rgba(255,255,255,.06); }
+@media (max-width: 560px) { nav.links a.hide-sm { display: none; } }
+
+/* hero */
+.hero { position: relative; padding: 48px 0 24px; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 24px; }
+.hello { display: inline-block; font-size: 14px; color: var(--gold); background: rgba(255,214,90,.1); border: 1px solid rgba(255,214,90,.25); padding: 4px 14px; border-radius: 999px; }
+h1 { font-size: clamp(40px, 7vw, 68px); line-height: 1.05; margin: 14px 0 10px; font-weight: 700; letter-spacing: -.5px; }
+h1 .o { color: var(--orange); }
+.lead { font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); max-width: 34ch; margin: 0 0 22px; }
+.lead b { color: var(--cream); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 999px; border: 0; cursor: pointer; font: inherit; font-weight: 700; transition: transform .15s ease, box-shadow .15s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn.primary { background: var(--orange); color: #1c101a; box-shadow: 0 8px 24px rgba(240,140,60,.3); }
+.btn.ghost { background: rgba(255,255,255,.07); color: var(--cream); border: 1px solid rgba(255,255,255,.12); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+.stage { position: relative; display: grid; place-items: center; min-height: 380px; padding-top: 40px; }
+.stage .glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255,170,80,.35), transparent 65%); }
+.stage .shadow { position: absolute; bottom: 26px; width: 210px; height: 26px; border-radius: 50%; background: rgba(0,0,0,.35); }
+.rubi-btn { position: relative; background: none; border: 0; padding: 0; cursor: pointer; animation: bob 2.6s ease-in-out infinite; }
+.rubi-btn img { width: 260px; height: auto; display: block; }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.bubble {
+  position: absolute; top: -4px; left: 50%; transform: translate(-50%, -6px) scale(.9); width: max-content; opacity: 0;
+  background: var(--cream); color: #1c101a; font-weight: 700; font-size: 15px; padding: 10px 16px; border-radius: 16px;
+  max-width: 260px; text-align: center; transition: opacity .2s ease, transform .2s ease; pointer-events: none; z-index: 2;
+}
+.bubble::after { content: ''; position: absolute; left: 50%; bottom: -9px; margin-left: -9px; border: 9px solid transparent; border-bottom: 0; border-top-color: var(--cream); }
+.bubble.show { opacity: 1; transform: translate(-50%, -14px) scale(1); }
+.tap-hint { position: absolute; bottom: -2px; font-size: 13px; color: var(--muted); }
+.spark { position: absolute; width: 14px; height: 14px; }
+.spark::before, .spark::after { content: ''; position: absolute; background: currentColor; }
+.spark::before { left: 0; right: 0; top: 5px; height: 4px; }
+.spark::after { top: 0; bottom: 0; left: 5px; width: 4px; }
+.spark { animation: twinkle 2.2s ease-in-out infinite; }
+@keyframes twinkle { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; text-align: center; }
+  .lead { margin-left: auto; margin-right: auto; }
+  .btns { justify-content: center; }
+  .stage { min-height: 340px; order: -1; }
+  .tools .search { flex-basis: 100%; }
+  .rubi-btn img { width: 210px; }
+}
+
+/* sections */
+section { padding: 40px 0; }
+.sec-title { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.sec-title img { width: 64px; height: auto; }
+h2 { font-size: clamp(26px, 4vw, 36px); line-height: 1.15; margin: 0; }
+.sec-sub { color: var(--muted); margin: 4px 0 0; font-size: 15px; }
+
+.feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.feat { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; }
+.feat-icon { font-size: 28px; }
+.feat h3 { margin: 6px 0 4px; font-size: 18px; }
+.feat p { margin: 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) { .feats { grid-template-columns: 1fr; gap: 10px; } .feat { display: grid; grid-template-columns: 44px 1fr; column-gap: 12px; padding: 16px; } .feat-icon { grid-row: span 2; } .feat h3 { margin: 0; font-size: 16px; } }
+
+/* tips */
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+.search { flex: 1 1 240px; min-width: 0; max-width: 100%; display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 0 16px; }
+.search svg { width: 18px; height: 18px; color: var(--muted); flex: none; }
+.search input { flex: 1; background: none; border: 0; color: var(--cream); font: inherit; padding: 12px 0; outline: none; min-width: 0; }
+.search input::placeholder { color: var(--muted); }
+.search:focus-within { border-color: var(--gold); }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--muted); cursor: pointer; }
+.chip.on { background: var(--teal); border-color: var(--teal); color: #10282a; }
+.tips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; align-items: start; }
+@media (max-width: 760px) { .tips { grid-template-columns: 1fr; } }
+.tip { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); scroll-margin-top: 80px; transition: border-color .2s; }
+.tip:hover { border-color: #7a4766; }
+.tip details[open] { background: linear-gradient(180deg, rgba(255,255,255,.03), transparent); border-radius: var(--r); }
+.tip summary { list-style: none; display: flex; gap: 14px; align-items: flex-start; padding: 18px; cursor: pointer; }
+.tip summary::-webkit-details-marker { display: none; }
+.tip-icon { font-size: 26px; width: 48px; height: 48px; flex: none; display: grid; place-items: center; background: var(--card2); border-radius: 14px; }
+.tip-head { flex: 1; min-width: 0; }
+.tip-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+.badge { text-transform: none; letter-spacing: 0; background: rgba(255,214,90,.14); color: var(--gold); border-radius: 999px; padding: 1px 10px; font-weight: 700; }
+.tip-title { display: block; font-weight: 700; font-size: 17px; line-height: 1.35; margin: 2px 0 6px; }
+.tip-rule { display: inline-block; font-size: 14px; font-weight: 700; color: var(--orange); }
+.tip-rule::before { content: 'Pegangan: '; color: var(--muted); font-weight: 500; }
+.chev { width: 12px; height: 12px; margin-top: 8px; border-right: 3px solid var(--muted); border-bottom: 3px solid var(--muted); transform: rotate(45deg); transition: transform .2s; flex: none; }
+details[open] .chev { transform: rotate(225deg); margin-top: 14px; }
+.tip-body { padding: 0 18px 18px 80px; color: var(--muted); font-size: 15px; }
+.tip-body p { margin: 0 0 8px; }
+.tip-body ol { margin: 0; padding-left: 20px; color: var(--cream); }
+.tip-body li { margin: 4px 0; }
+.tip-body li::marker { color: var(--teal); font-weight: 700; }
+@media (max-width: 480px) { .tip-body { padding-left: 18px; } }
+.empty { display: none; text-align: center; color: var(--muted); padding: 24px; }
+.empty.show { display: block; }
+.more { text-align: center; margin-top: 18px; color: var(--muted); font-size: 15px; }
+.more a { color: var(--gold); font-weight: 700; }
+
+/* seri */
+.series { background: linear-gradient(120deg, #3b1f2f, #2c1b2a); border: 1px solid var(--line); border-radius: 28px; padding: 26px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.series img { width: 140px; height: auto; }
+.series .tag { display: inline-block; background: var(--red); color: var(--cream); font-weight: 700; font-size: 13px; padding: 4px 12px; border-radius: 999px; letter-spacing: .5px; }
+.series h2 { margin: 10px 0 6px; }
+.series p { margin: 0 0 12px; color: var(--muted); }
+.series ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.series li { display: flex; gap: 12px; align-items: center; background: rgba(0,0,0,.18); border-radius: 14px; padding: 10px 14px; }
+.ep-no { font-weight: 700; color: #1c101a; background: var(--gold); border-radius: 10px; padding: 2px 10px; font-size: 14px; }
+.series li a { text-decoration: none; font-weight: 700; }
+.series li a:hover { color: var(--gold); }
+@media (max-width: 640px) { .series { grid-template-columns: 1fr; text-align: center; } .series img { margin: 0 auto; width: 110px; } .series li { text-align: left; } }
+
+/* tentang */
+.about { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 26px; }
+.about p { margin: 8px 0 0; color: var(--muted); }
+.about p b { color: var(--cream); }
+.about img { width: 120px; height: auto; }
+@media (max-width: 640px) { .about { grid-template-columns: 1fr; text-align: center; } .about img { margin: 0 auto; order: -1; } }
+
+/* ikuti */
+.follow { text-align: center; }
+.socials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+.social { display: flex; align-items: center; gap: 14px; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; text-align: left; transition: transform .15s, border-color .15s; }
+.social:hover { transform: translateY(-3px); border-color: var(--gold); }
+.social .ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; flex: none; }
+.social .ico svg { width: 24px; height: 24px; }
+.social b { display: block; font-size: 16px; }
+.social span { color: var(--muted); font-size: 13px; }
+.yt .ico { background: #e33b2e; } .fb .ico { background: #2a6fdb; } .ig .ico { background: linear-gradient(45deg, #f5a623, #e1306c, #833ab4); }
+@media (max-width: 760px) { .socials { grid-template-columns: 1fr; } }
+.share { margin-top: 18px; }
+.toast { display: inline-block; margin-left: 8px; color: var(--teal); font-weight: 700; opacity: 0; transition: opacity .2s; }
+.toast.show { opacity: 1; }
+
+footer { border-top: 1px solid rgba(255,255,255,.06); padding: 26px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+footer b { color: var(--cream); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#tips">Langsung ke tips</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#awal"><img src="img/logo-96.png" alt="" width="38" height="38"><span>Rubi si Kitsune<small>Teman Belajar Teknologi</small></span></a>
+    <nav class="links" aria-label="Menu">
+      <a href="#tips">Tips</a>
+      <a href="#seri" class="hide-sm">Seri</a>
+      <a href="#tentang" class="hide-sm">Tentang</a>
+      <a href="#ikuti">Ikuti</a>
+    </nav>
+  </div>
+</header>
+
+<main id="awal">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="hello">🦊 Teman belajar teknologi &amp; AI</span>
+        <h1>Hai, aku <span class="o">Rubi!</span></h1>
+        <p class="lead">Tips <b>30 detik</b> supaya kamu dan keluarga <b>aman di dunia digital</b>: dari modus penipuan sampai cara pintar memakai AI.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://www.youtube.com/@rubisikitsune" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Tonton di YouTube</a>
+          <a class="btn ghost" href="#tips">Lihat tips</a>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="glow"></div>
+        <i class="spark" style="color:var(--gold);top:40px;left:18%"></i>
+        <i class="spark" style="color:var(--teal);top:90px;right:14%;animation-delay:.7s"></i>
+        <i class="spark" style="color:var(--orange);bottom:90px;left:12%;animation-delay:1.3s"></i>
+        <i class="spark" style="color:var(--cream);top:20px;right:30%;animation-delay:1.8s"></i>
+        <div class="shadow"></div>
+        <div class="bubble" id="bubble" role="status" aria-live="polite">Hai! Ketuk aku untuk tips 👋</div>
+        <button class="rubi-btn" id="rubi" type="button" aria-label="Ketuk Rubi untuk melihat satu tips">
+          <img class="px" id="rubiImg" src="img/rubi-wave1.png" alt="Rubi, rubah pixel berjaket krem, melambaikan tangan" width="350" height="380">
+        </button>
+        <span class="tap-hint">Ketuk Rubi untuk tips acak</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-apa">
+    <div class="wrap">
+      <h2 id="h-apa" class="sr-only" style="position:absolute;left:-9999px">Yang kamu dapat</h2>
+      <div class="feats"><div class="feat"><span class="feat-icon" aria-hidden="true">🔐</span><h3>Aman dari penipuan</h3><p>Kenali modus terbaru sebelum kamu atau keluargamu jadi korban.</p></div><div class="feat"><span class="feat-icon" aria-hidden="true">🤖</span><h3>Pintar pakai AI</h3><p>Cara memakai AI dengan aman, dan tahu kapan AI bisa salah.</p></div><div class="feat"><span class="feat-icon" aria-hidden="true">📱</span><h3>Tips HP sehari-hari</h3><p>Langkah singkat yang bisa langsung kamu cek di HP-mu.</p></div></div>
+    </div>
+  </section>
+
+  <section id="tips" aria-labelledby="h-tips">
+    <div class="wrap">
+      <div class="sec-title">
+        <img class="px" src="img/rubi-point.png" alt="" width="350" height="380">
+        <div><h2 id="h-tips">Tips dari Rubi</h2><p class="sec-sub">Ketuk salah satu untuk melihat langkah-langkahnya.</p></div>
+      </div>
+      <div class="tools">
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="q" type="search" placeholder="Cari: OTP, QRIS, WhatsApp..." aria-label="Cari tips">
+        </label>
+        <div class="chips" role="group" aria-label="Kategori"><button type="button" class="chip on" data-filter="semua" aria-pressed="true">Semua</button><button type="button" class="chip" data-filter="penipuan" aria-pressed="false">Penipuan</button><button type="button" class="chip" data-filter="akun" aria-pressed="false">Akun &amp; HP</button><button type="button" class="chip" data-filter="ai" aria-pressed="false">AI</button></div>
+      </div>
+      <div class="tips" id="list">
+      <article class="tip" data-cat="penipuan" id="tip-1">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">📦</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan<span class="badge">Jangan Ketipu #1</span></span>
+              <span class="tip-title">Paket COD datang, padahal nggak pesan?</span>
+              <span class="tip-rule">Tidak pesan, jangan bayar.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Penipu mengirim barang murahan ke alamat acak, berharap orang rumah langsung membayar.</p>
+            <ol><li>Tanya dulu orang serumah, siapa yang memesan.</li><li>Cek riwayat pesanan di aplikasi belanja.</li><li>Kalau tidak ada yang memesan, tolak paketnya.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-2">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">💸</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan<span class="badge">Jangan Ketipu #2</span></span>
+              <span class="tip-title">Uang masuk, lalu &quot;maaf, salah transfer&quot;?</span>
+              <span class="tip-rule">Salah transfer diurus bank, bukan lewat chat.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Kamu diminta mengembalikan uang ke rekening lain. Uang itu bisa berasal dari pinjaman online atas namamu atau dari korban lain.</p>
+            <ol><li>Jangan transfer balik ke rekening yang mereka minta.</li><li>Hubungi bank lewat nomor resmi dan laporkan.</li><li>Biar bank yang mengurus pengembaliannya.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-3">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">💌</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan</span>
+              <span class="tip-title">Undangan nikah berformat APK di WhatsApp?</span>
+              <span class="tip-rule">Undangan bukan aplikasi.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>File APK adalah aplikasi. Begitu dipasang, penipu bisa membaca SMS dan kode OTP, lalu menguras rekening.</p>
+            <ol><li>Undangan asli berupa gambar atau PDF.</li><li>Jangan pasang aplikasi yang dikirim lewat chat.</li><li>Hapus pesannya dan blokir pengirimnya.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-4">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">💼</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan</span>
+              <span class="tip-title">Ditawari kerja &quot;like video, dibayar 50 ribu&quot;?</span>
+              <span class="tip-rule">Kerja asli tidak minta setoran.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Awalnya kamu memang dibayar supaya percaya, lalu diminta setor uang untuk &quot;tugas premium&quot;. Uangnya tidak kembali.</p>
+            <ol><li>Jangan setor uang dalam bentuk apa pun.</li><li>Keluar dari grupnya.</li><li>Laporkan dan blokir akunnya.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-5">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🔳</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan</span>
+              <span class="tip-title">Bayar pakai QRIS? Cek dulu namanya</span>
+              <span class="tip-rule">Scan, cek nama, baru bayar.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Stiker QRIS palsu bisa ditempel di atas QRIS asli, misalnya di kotak amal atau warung.</p>
+            <ol><li>Setelah scan, baca nama penerima di layar sebelum membayar.</li><li>Kalau namanya tidak sesuai, batalkan.</li><li>Beri tahu pemilik warung atau pengurus kotak amal.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-6">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🎁</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan</span>
+              <span class="tip-title">SMS &quot;selamat, kamu menang hadiah&quot;?</span>
+              <span class="tip-rule">Hadiah asli tidak minta biaya.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Tautannya mengarah ke situs palsu yang meminta data pribadi atau biaya.</p>
+            <ol><li>Jangan klik tautannya.</li><li>Cek lewat aplikasi atau akun resmi pemberi hadiah.</li><li>Hapus pesannya.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="penipuan" id="tip-7">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">📞</span>
+            <span class="tip-head">
+              <span class="tip-meta">Penipuan</span>
+              <span class="tip-title">Telepon panik dari keluarga minta transfer?</span>
+              <span class="tip-rule">Panik? Tutup, lalu telepon balik.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Suara keluarga bisa ditiru AI hanya dari rekaman pendek.</p>
+            <ol><li>Tutup teleponnya, lalu telepon balik ke nomor yang biasa kamu pakai.</li><li>Sepakati kata sandi keluarga untuk keadaan darurat.</li><li>Jangan transfer sebelum benar-benar yakin.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="akun" id="tip-8">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🔢</span>
+            <span class="tip-head">
+              <span class="tip-meta">Akun &amp; HP</span>
+              <span class="tip-title">Ada yang minta kode OTP?</span>
+              <span class="tip-rule">OTP hanya untukmu.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Kode OTP adalah kunci terakhir akunmu. Siapa pun yang memintanya patut dicurigai.</p>
+            <ol><li>Jangan berikan ke siapa pun, termasuk yang mengaku petugas bank.</li><li>Petugas bank tidak pernah meminta PIN, password, atau OTP.</li><li>Kalau terlanjur, segera hubungi bank lewat nomor resmi.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="akun" id="tip-9">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🔐</span>
+            <span class="tip-head">
+              <span class="tip-meta">Akun &amp; HP</span>
+              <span class="tip-title">Password masih &quot;123456&quot;?</span>
+              <span class="tip-rule">Panjang, beda-beda, dua langkah.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Password pendek dan umum bisa ditebak dalam hitungan detik.</p>
+            <ol><li>Pakai minimal 12 karakter.</li><li>Campur huruf besar, huruf kecil, angka, dan simbol.</li><li>Jangan pakai password yang sama di semua akun.</li><li>Aktifkan verifikasi dua langkah.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="akun" id="tip-10">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">💻</span>
+            <span class="tip-head">
+              <span class="tip-meta">Akun &amp; HP</span>
+              <span class="tip-title">Lupa logout WhatsApp di komputer?</span>
+              <span class="tip-rule">Cek Perangkat Tertaut secara rutin.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Siapa pun yang memakai komputer itu bisa membaca chat-mu, bahkan mengirim pesan atas namamu.</p>
+            <ol><li>Android: buka WhatsApp, ketuk titik tiga, pilih Perangkat Tertaut.</li><li>iPhone: buka WhatsApp, Pengaturan, Perangkat Tertaut.</li><li>Ketuk perangkat yang asing, lalu pilih Keluar.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="ai" id="tip-11">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🎭</span>
+            <span class="tip-head">
+              <span class="tip-meta">AI</span>
+              <span class="tip-title">Video ini asli atau buatan AI?</span>
+              <span class="tip-rule">Ragu? Jangan sebar dulu.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>Wajah dan suara orang terkenal bisa dipalsukan dengan AI (deepfake), misalnya untuk promosi investasi palsu.</p>
+            <ol><li>Cek sumbernya: akun resmi atau media terpercaya?</li><li>Perhatikan kejanggalan wajah, suara, dan gerak bibir.</li><li>Jangan langsung sebar kalau belum yakin.</li></ol>
+          </div>
+        </details>
+      </article>
+      <article class="tip" data-cat="ai" id="tip-12">
+        <details>
+          <summary>
+            <span class="tip-icon" aria-hidden="true">🤖</span>
+            <span class="tip-head">
+              <span class="tip-meta">AI</span>
+              <span class="tip-title">Jawaban AI pasti benar?</span>
+              <span class="tip-rule">AI membantu, kamu yang memeriksa.</span>
+            </span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="tip-body">
+            <p>AI bisa salah dan mengarang jawaban dengan sangat meyakinkan.</p>
+            <ol><li>Cek ulang informasi penting ke sumber resmi.</li><li>Untuk kesehatan, hukum, dan uang, tanyakan ke ahlinya.</li><li>Pakai AI untuk membantu berpikir, bukan pengganti memeriksa.</li></ol>
+          </div>
+        </details>
+      </article>
+      </div>
+      <p class="empty" id="empty">Belum ada tips untuk kata itu. Coba kata lain, atau tanyakan di kolom komentar video Rubi.</p>
+      <p class="more">Versi videonya ada di <a href="https://www.youtube.com/@rubisikitsune" rel="noopener">channel YouTube Rubi</a>, video baru setiap hari.</p>
+    </div>
+  </section>
+
+  <section id="seri" aria-labelledby="h-seri">
+    <div class="wrap">
+      <div class="series">
+        <img class="px" src="img/rubi-kaget.png" alt="" width="320" height="380">
+        <div>
+          <span class="tag">SERI</span>
+          <h2 id="h-seri">Jangan Ketipu!</h2>
+          <p>Satu modus penipuan per episode, dijelaskan dalam sekitar 25 detik. Tiap episode bisa ditonton sendiri-sendiri.</p>
+          <ul><li><span class="ep-no">#1</span><a href="#tip-1" data-open="tip-1">Paket COD datang, padahal nggak pesan?</a></li><li><span class="ep-no">#2</span><a href="#tip-2" data-open="tip-2">Uang masuk, lalu &quot;maaf, salah transfer&quot;?</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" aria-labelledby="h-tentang">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <h2 id="h-tentang">Tentang Rubi</h2>
+          <p><b>Rubi</b> adalah rubah pixel yang senang berbagi ilmu teknologi. Setiap hari Rubi membuat video pendek tentang cara aman memakai HP, internet, dan AI, dengan bahasa yang gampang dipahami semua umur.</p>
+          <p>Rubi dibuat oleh <b>Andre</b>.</p>
+        </div>
+        <img class="px" src="img/rubi-bingung.png" alt="" width="320" height="380">
+      </div>
+    </div>
+  </section>
+
+  <section id="ikuti" class="follow" aria-labelledby="h-ikuti">
+    <div class="wrap">
+      <h2 id="h-ikuti">Ikuti Rubi</h2>
+      <p class="sec-sub">Tips baru setiap hari di tiga tempat ini.</p>
+      <div class="socials">
+        <a class="social yt" href="https://www.youtube.com/@rubisikitsune" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span><b>YouTube</b><span>@rubisikitsune</span></span></a>
+        <a class="social fb" href="https://www.facebook.com/search/top?q=Rubi%20si%20Kitsune%20-%20Teman%20Belajar%20Teknologi" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9H17l.5-4h-4V8.8c0-.5.3-.8.5-.8z"/></svg></span>
+          <span><b>Facebook</b><span>Rubi si Kitsune</span></span></a>
+        <a class="social ig" href="https://www.instagram.com/rubisikitsune/" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+          <span><b>Instagram</b><span>@rubisikitsune</span></span></a>
+      </div>
+      <div class="share">
+        <button class="btn ghost" id="shareBtn" type="button">Salin alamat halaman ini</button><span class="toast" id="toast" role="status">Tersalin!</span>
+        <p class="sec-sub">Bagikan ke grup keluarga supaya makin banyak yang aman.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="px" src="img/logo-96.png" alt="" width="48" height="48" style="border-radius:50%">
+    <p><b>Rubi · dibuat oleh Andre</b><br>© 2026 rubisikitsune.web.id</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var RULES = ["Tidak pesan, jangan bayar.", "Salah transfer diurus bank, bukan lewat chat.", "Undangan bukan aplikasi.", "Kerja asli tidak minta setoran.", "Scan, cek nama, baru bayar.", "Hadiah asli tidak minta biaya.", "Panik? Tutup, lalu telepon balik.", "OTP hanya untukmu.", "Panjang, beda-beda, dua langkah.", "Cek Perangkat Tertaut secara rutin.", "Ragu? Jangan sebar dulu.", "AI membantu, kamu yang memeriksa."];
+  var img = document.getElementById('rubiImg'), bubble = document.getElementById('bubble');
+  var frames = ['img/rubi-wave1.png', 'img/rubi-wave2.png'];
+  frames.concat(['img/rubi-blink.png']).forEach(function (s) { var i = new Image(); i.src = s; });
+  var waving = null, hideT = null, last = -1;
+  function wave(n) {
+    clearInterval(waving); var k = 0;
+    waving = setInterval(function () { img.src = frames[k % 2]; k++; if (k > n) { clearInterval(waving); img.src = frames[0]; } }, 220);
+  }
+  setInterval(function () { if (img.src.indexOf('wave1') > -1 || img.src.indexOf('wave2') > -1) {
+    var prev = img.src; img.src = 'img/rubi-blink.png'; setTimeout(function () { if (img.src.indexOf('blink') > -1) img.src = prev; }, 150); } }, 3800);
+  function say(t) {
+    bubble.textContent = t; bubble.classList.add('show');
+    clearTimeout(hideT); hideT = setTimeout(function () { bubble.classList.remove('show'); }, 3600);
+  }
+  setTimeout(function () { wave(6); say('Hai! Ketuk aku untuk tips 👋'); }, 500);
+  document.getElementById('rubi').addEventListener('click', function () {
+    var i; do { i = Math.floor(Math.random() * RULES.length); } while (i === last && RULES.length > 1);
+    last = i; wave(4); say(RULES[i]);
+  });
+
+  // filter dan pencarian tips
+  var q = document.getElementById('q'), cards = [].slice.call(document.querySelectorAll('.tip')),
+      chips = [].slice.call(document.querySelectorAll('.chip')), empty = document.getElementById('empty'), cat = 'semua';
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function apply() {
+    var term = norm(q.value.trim()), shown = 0;
+    cards.forEach(function (c) {
+      var ok = (cat === 'semua' || c.dataset.cat === cat) && (!term || norm(c.textContent).indexOf(term) > -1);
+      c.hidden = !ok; if (ok) shown++;
+    });
+    empty.classList.toggle('show', shown === 0);
+  }
+  q.addEventListener('input', apply);
+  chips.forEach(function (b) { b.addEventListener('click', function () {
+    cat = b.dataset.filter;
+    chips.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    apply();
+  }); });
+
+  // buka tips dari daftar seri
+  function openTip(id) {
+    var el = document.getElementById(id); if (!el) return;
+    cat = 'semua'; q.value = ''; chips.forEach(function (x) { var on = x.dataset.filter === 'semua'; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); }); apply();
+    el.querySelector('details').open = true;
+  }
+  [].slice.call(document.querySelectorAll('[data-open]')).forEach(function (a) {
+    a.addEventListener('click', function () { openTip(a.dataset.open); });
+  });
+  if (/^#tip-\d+$/.test(location.hash)) openTip(location.hash.slice(1));
+
+  // salin alamat
+  var toast = document.getElementById('toast');
+  document.getElementById('shareBtn').addEventListener('click', function () {
+    var url = 'https://rubisikitsune.web.id/';
+    function done() { toast.classList.add('show'); setTimeout(function () { toast.classList.remove('show'); }, 2000); }
+    try { navigator.clipboard.writeText(url).then(done, function () { toast.textContent = url; done(); }); }
+    catch (e) { toast.textContent = url; done(); }
+  });
+})();
+</script>
+</body>
+</html>
